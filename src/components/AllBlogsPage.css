@@ -1,0 +1,94 @@
+.blogs-page {
+  min-height: 100vh;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+.search-bar {
+  background: #f8f9fa;
+}
+
+.blog-card {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.badge {
+  font-size: 0.9rem;
+}
+
+.pagination .page-link {
+  color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Dark mode styles */
+body.dark-mode .blogs-page {
+  background: #212529;
+  color: #e9ecef;
+}
+
+body.dark-mode .page-header {
+  background: linear-gradient(135deg, #343a40, #495057);
+}
+
+body.dark-mode .search-bar {
+  background: #343a40;
+}
+
+body.dark-mode .blog-card {
+  background: #343a40;
+  color: #e9ecef;
+}
+
+body.dark-mode .blog-card .card-footer {
+  background: transparent;
+}
+
+body.dark-mode .badge {
+  background-color: #6c757d;
+}
+
+body.dark-mode .pagination .page-link {
+  color: #6c757d;
+  background: #343a40;
+  border-color: #495057;
+}
+
+body.dark-mode .pagination .page-item.active .page-link {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+body.dark-mode .dropdown-menu {
+  background: #343a40;
+  border-color: #495057;
+}
+
+body.dark-mode .dropdown-item {
+  color: #e9ecef;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background: #495057;
+}
+
+body.dark-mode .dropdown-toggle {
+  background: #343a40;
+  border-color: #495057;
+  color: #e9ecef;
+}

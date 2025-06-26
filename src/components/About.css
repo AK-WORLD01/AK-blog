@@ -1,0 +1,99 @@
+.about-page {
+  min-height: 100vh;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+.mission-section {
+  background: #fff;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.highlights-section {
+  background: #f8f9fa;
+}
+
+.highlights-section .card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.highlights-section .card:hover {
+  transform: translateY(-10px);
+}
+
+.highlights-section .icon {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.cta-section {
+  background: #fff;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .btn {
+  padding: 0.75rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .mission-section img {
+    margin-top: 2rem;
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .about-page {
+  background: #212529;
+  color: #e9ecef;
+}
+
+body.dark-mode .hero-section {
+  background: linear-gradient(135deg, #343a40, #495057);
+}
+
+body.dark-mode .mission-section {
+  background: #343a40;
+}
+
+body.dark-mode .highlights-section {
+  background: #495057;
+}
+
+body.dark-mode .highlights-section .card {
+  background: #343a40;
+  color: #e9ecef;
+}
+
+body.dark-mode .highlights-section .icon {
+  color: #6c757d;
+}
+
+body.dark-mode .cta-section {
+  background: #343a40;
+}
+
+body.dark-mode .cta-section .btn-outline-primary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+body.dark-mode .cta-section .btn-outline-primary:hover {
+  background: #6c757d;
+  color: #fff;
+}

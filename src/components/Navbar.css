@@ -1,0 +1,221 @@
+/* Navbar base styles */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 15px 0;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled {
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo container and logo styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  background: transparent !important; /* Ensure no background */
+}
+
+.logo {
+  width: 100px; /* Match the <img> tag's width */
+  height: 40px; /* Match the <img> tag's height */
+  object-fit: contain; /* Ensures the logo scales properly without distortion */
+  background: transparent !important; /* Ensure no background */
+}
+
+/* Brand name styles */
+.brand-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #ff0beb 0%, #0817e7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .brand-name {
+  background: linear-gradient(to right, #a50e7a 0%, #110e78 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Nav links animation */
+.nav-link {
+  position: relative;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  transition: width 0.3s ease;
+}
+
+.dark-mode .nav-link::after {
+  background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Toggle button styles */
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #333;
+}
+
+.toggle-ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+  transform: translateX(30px);
+}
+
+.sun-icon, .moon-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.sun-icon {
+  left: 6px;
+  opacity: 1;
+}
+
+.moon-icon {
+  right: 6px;
+  opacity: 0;
+}
+
+.toggle-checkbox:checked + .toggle-label .sun-icon {
+  opacity: 0;
+}
+
+.toggle-checkbox:checked + .toggle-label .moon-icon {
+  opacity: 1;
+}
+
+/* Sign up button animation */
+.signup-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.signup-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.dark-mode .signup-btn::before {
+  background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.signup-btn:hover::before {
+  width: 100%;
+}
+
+.signup-btn:hover {
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile menu toggle animation */
+.navbar-toggler-icon {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  transform: translateY(-8px);
+}
+
+.navbar-toggler-icon::after {
+  transform: translateY(8px);
+}
+
+.navbar-toggler-icon.open {
+  background-color: transparent;
+}
+
+.navbar-toggler-icon.open::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler-icon.open::after {
+  transform: rotate(-45deg);
+}
+
+/* Dark mode specific styles */
+.dark-mode .navbar {
+  background-color: transparent !important;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .navbar-scrolled {
+  background-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: white !important;
+}

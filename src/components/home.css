@@ -1,0 +1,214 @@
+/* Default Styles */
+:root {
+  --granite-bg: #E5E7EB;
+  --granite-pink: #ff06f3;
+  --granite-blue: #0a1bcf;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --text-color: #1F2937;
+}
+
+body {
+  background-color: var(--granite-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.home-page {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Welcome Section - Default */
+.welcome-section {
+  background: linear-gradient(135deg, #F3F4F6, var(--granite-bg)) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.welcome-section .container {
+  z-index: 2; /* Ensure content is above video and overlay */
+}
+
+.welcome-section h1,
+.welcome-section p,
+.welcome-section .btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* Image-like Video */
+.img-video {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 10px 10px 20px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.img-video:hover {
+  transform: scale(1.05);
+}
+
+/* Explore All Blogs Button - Default */
+.welcome-section .btn-light {
+  background: linear-gradient(90deg, var(--granite-pink), var(--granite-blue));
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.welcome-section .btn-light:hover {
+  background: linear-gradient(90deg, var(--granite-blue), var(--granite-pink));
+  transform: translateY(-2px);
+}
+
+/* Card Hover Effect */
+.card.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.card-img {
+  box-shadow: 8px 8px 15px var(--shadow-color);
+}
+
+/* Light Mode Styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    --granite-bg: #E5E7EB;
+    --granite-pink: #ff06f3;
+    --granite-blue: #0a1bcf;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-color: #1F2937;
+  }
+
+  body {
+    background-color: var(--granite-bg);
+    color: var(--text-color);
+  }
+
+  /* Welcome Section - Light Mode */
+  .welcome-section {
+    background: linear-gradient(135deg, #F3F4F6, var(--granite-bg)) !important;
+  }
+
+  /* Latest Updates Section - Light Mode */
+  .news-section {
+    background-color: #FFFFFF; /* Pure white for daytime */
+    padding: 5rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .news-section .card {
+    background-color: #F9FAFB; /* Slightly off-white for cards */
+    border: none;
+    color: var(--text-color);
+  }
+
+  .news-section h2 {
+    color: var(--text-color);
+  }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --granite-bg: #1F2937;
+    --text-color: #F3F4F6;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+
+  body {
+    background-color: var(--granite-bg);
+    color: var(--text-color);
+  }
+
+  /* Welcome Section - Dark Mode */
+  .welcome-section {
+    background: linear-gradient(135deg, #374151, var(--granite-bg)) !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Latest Updates Section - Dark Mode */
+  .news-section {
+    background-color: #000000; /* Dark background for night mode */
+    padding: 5rem 0;
+  }
+
+  .news-section .card {
+    background-color: #4B5563; /* Darker card background */
+    color: var(--text-color);
+  }
+
+  .news-section h2 {
+    color: var(--text-color);
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for night mode */
+  }
+
+  /* Card and Button Adjustments */
+  .card {
+    background-color: #374151;
+    color: var(--text-color);
+  }
+
+  .welcome-section .btn-light {
+    background: linear-gradient(90deg, var(--granite-blue), var(--granite-pink));
+  }
+
+  .welcome-section .btn-light:hover {
+    background: linear-gradient(90deg, var(--granite-pink), var(--granite-blue));
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .welcome-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-video {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .welcome-section .btn-light {
+    padding: 10px 20px;
+  }
+
+  .news-section {
+    padding: 3rem 0; /* Reduced padding for mobile */
+  }
+}
